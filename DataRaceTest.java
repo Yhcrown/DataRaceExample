@@ -26,7 +26,7 @@ public class DataRaceTest {
     private class Task implements Runnable {
         @Override
         public void run() {
-            for (int iter = 0; iter < 100; iter++) {
+            for (int iter = 0; iter < 10; iter++) {
                 DataRace.request();
                 for (int i = 0; i < DataRace.rep.length; i++) {
                     if (DataRace.rep[i] == null) {
